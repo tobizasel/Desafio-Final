@@ -1,0 +1,87 @@
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+
+}
+
+$naranja:#EE9B00;
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: $naranja;
+    
+    .header__titulo{
+        padding: 3rem;
+        font-weight: bold;
+    }
+}
+
+.seccion__procesadores{
+    margin: 2rem 10rem;
+    background-color: #EE9B00bb;
+    border-radius: 1rem;
+    padding-bottom:3rem;
+    padding-top:1.5rem;
+
+
+    .articulo__titulo{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2rem;
+        padding-top: 1.5rem;
+        font-size: 2rem;
+    }
+    
+    .articulos__procesadores{
+        display: grid;
+        margin: 0 5rem;
+        row-gap: 3rem;
+        grid-template-areas: 
+        " i3 . i5 "
+        " i7 . i9 "
+        ;
+        
+        #articulo__i3{
+            grid-area: i3;
+        }
+    
+        #articulo__i5{
+            grid-area: i5;
+        }
+    
+        #articulo__i7{
+            grid-area: i7;
+        }
+    
+        #articulo__i9{
+            grid-area: i9;
+        }
+
+        .articulo__procesadores{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .articulo__imagen{
+                height: 15rem;
+                width: 15rem;
+            }
+
+            .articulo__boton{
+                padding: 1.6rem 1.4rem;
+                border-radius: .8rem;
+                background-color: #CA6702;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.footer{
+    display: flex;
+    
+}

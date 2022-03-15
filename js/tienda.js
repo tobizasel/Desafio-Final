@@ -29,10 +29,6 @@ let validacion = true;
     } while (validacion == false);
 
 
-
-
-
-
 function comprar(){
     
     let elegir;
@@ -118,5 +114,26 @@ function calcularCuotas(precio){
         default:
             console.log("Por favor ingresa una de las cuotas ofrecidas por el sistema")
         break;
+    }
+}
+
+let botonCompra = document.querySelector("#procesador__compra__1");
+botonCompra.addEventListener("click", clickBoton);
+
+function clickBoton(){
+    
+    let primerCompra = true;
+    
+    if(primerCompra == true){
+
+        console.log("Funciona")
+        let carrito = document.createElement("div");
+
+        carrito.innerHTML = `<h3>Compraste un Procesador I3</h3>
+                            <p class = "procesador__precio">Con un precio de $17.000</p>`
+        
+        document.body.appendChild(carrito);
+        primerCompra = false;
+
     }
 }

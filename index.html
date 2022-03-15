@@ -5,12 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/main.css">
 </head>
 <body>
-    <header>
-        <h1>¡Tienda de componentes!</h1>
+    <header class="header">
+        <h1 class="header__titulo">Tienda de Componentes</h1>
     </header>
 
+    <section class="seccion__procesadores">
+        <h2 class="articulo__titulo">PROCESADORES</h2>
+        
+
+        <div class="articulos__procesadores">
+            <article class="articulo__procesadores" id="articulo__i3">
+                <h3>Intel Core I3</h3>
+                <img src="./images/i3.jpg" alt="Procesador Intel Core I3" class="articulo__imagen">
+                <button class="articulo__boton" id="procesador__compra__1">+ AGREGAR AL CARRITO</button>
+            </article>
+
+            <article class="articulo__procesadores" id="articulo__i5">
+                <h3>Intel Core I5</h3>
+                <img src="./images/i5.jpg" alt="Procesador Intel Core I5" class="articulo__imagen">
+                <span class="articulo__boton">+ AGREGAR AL CARRITO</span>
+            </article>
+
+            <article class="articulo__procesadores" id="articulo__i7">
+                <h3>Intel Core I7</h3>
+                <img src="./images/i7.jpg" alt="Procesador Intel Core I7" class="articulo__imagen">
+                <span class="articulo__boton">+ AGREGAR AL CARRITO</span>
+            </article>
+
+            <article class="articulo__procesadores" id="articulo__i9">
+                <h3>Intel Core I9</h3>
+                <img src="./images/i9.jpg" alt="Procesador Intel Core I9" class="articulo__imagen">
+                <span class="articulo__boton">+ AGREGAR AL CARRITO</span>
+            </article>
+        </div>
+    </section>
+
+
+     
     <script src="./js/tienda.js"></script>
 
 </body>
