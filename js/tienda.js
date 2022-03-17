@@ -25,24 +25,24 @@ procesadores.forEach(procesador =>  {
     
     let contenedor = document.createElement("div");
     contenedor.classList.add("articulos__procesadores");
-    let seccionProcesadores = document.getElementsByClassName("seccion__procesadores");
+    let seccionProcesadores = document.querySelector(".seccion__procesadores");
 
     contenedor.innerHTML = `<article class="articulo__procesadores" id="articulo__i3">
-    <h3>Intel Core ${procesador.modelo}</h3>
+    <h3>Intel Core I${procesador.modelo}</h3>
     <img src="${procesador.imagen}" alt="Procesador Intel Core I${procesador.modelo}" class="articulo__imagen">
     <button class="articulo__boton procesador__compra__1" onclick="clickBoton(${procesador.precio}, ${procesador.modelo})">+ AGREGAR AL CARRITO</button>
     </article>`
     
     
 
-    document.body.appendChild(contenedor)
+    seccionProcesadores.appendChild(contenedor)
 
 });
 
 function clickBoton(precio, modelo){
     
     
-
+    let sectionCarrito = document.getElementById("seccion__carrito")
     let carrito = document.createElement("div");
     carrito.classList.add("carrito");
 
@@ -50,6 +50,6 @@ function clickBoton(precio, modelo){
                         <p class = "procesador__precio">Con un precio de $${precio}</p>`
 
     
-    document.body.appendChild(carrito)
+    sectionCarrito.appendChild(carrito)
     
 }
