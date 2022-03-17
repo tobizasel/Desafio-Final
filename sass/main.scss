@@ -21,11 +21,6 @@ $naranja:#EE9B00;
 }
 
 .seccion__procesadores{
-    margin: 2rem 10rem;
-    background-color: #EE9B00bb;
-    border-radius: 1rem;
-    padding-bottom:3rem;
-    padding-top:1.5rem;
 
 
     .articulo__titulo{
@@ -79,6 +74,13 @@ $naranja:#EE9B00;
             }
         }
     }
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer{

@@ -21,14 +21,6 @@
   font-weight: bold;
 }
 
-.seccion__procesadores {
-  margin: 2rem 10rem;
-  background-color: #EE9B00bb;
-  border-radius: 1rem;
-  padding-bottom: 3rem;
-  padding-top: 1.5rem;
-}
-
 .seccion__procesadores .articulo__titulo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,6 +86,22 @@
   border-radius: .8rem;
   background-color: #CA6702;
   font-size: 1.3rem;
+}
+
+.carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer {
