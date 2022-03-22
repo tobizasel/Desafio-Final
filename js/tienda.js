@@ -33,11 +33,16 @@ procesadores.forEach(procesador =>  {
     <button class="articulo__boton procesador__compra__1" onclick="clickBoton(${procesador.precio}, ${procesador.modelo})">+ AGREGAR AL CARRITO</button>
     </article>`
     
+    contenedor.addEventListener('click', function (){
+        const procesadorJSON = JSON.stringify(procesador);
+        localStorage.setItem('procesador', procesadorJSON);
+        
+    });
     
-
     seccionProcesadores.appendChild(contenedor)
 
 });
+
 
 function clickBoton(precio, modelo){
     
@@ -53,3 +58,5 @@ function clickBoton(precio, modelo){
     sectionCarrito.appendChild(carrito)
     
 }
+
+localStorage.clear();
