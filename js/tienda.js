@@ -15,10 +15,10 @@ const memoriasRam = [
 ];
 
 const procesadores = [
-    {id : 1, componente: "Procesador", modelo: 3, precio: 17000, imagen: "../images/i3.jpg"},
-    {id : 2, componente: "Procesador", modelo: 5, precio: 26000, imagen: "../images/i5.jpg"},
-    {id : 3, componente: "Procesador", modelo: 7, precio: 47000, imagen: "../images/i7.jpg"},
-    {id : 4, componente: "Procesador", modelo: 9, precio: 85000, imagen: "../images/i9.jpg"},
+    {id : 1, componente: "Procesador", modelo: 3, precio: 17000, imagen: "./images/i3.jpg"},
+    {id : 2, componente: "Procesador", modelo: 5, precio: 26000, imagen: "./images/i5.jpg"},
+    {id : 3, componente: "Procesador", modelo: 7, precio: 47000, imagen: "./images/i7.jpg"},
+    {id : 4, componente: "Procesador", modelo: 9, precio: 85000, imagen: "./images/i9.jpg"},
 ];
 
 procesadores.forEach(procesador =>  {
