@@ -1,8 +1,6 @@
-
-
 const tarjetasGraficas = [
-    {id : 1, componente: "Tarjeta Grafica", modelo: "GTX 1650", precio: 60000},
-    {id : 2, componente: "Tarjeta Grafica", modelo: "GTX 1660", precio: 110000},
+    {id: 1, componente: "Tarjeta Grafica", modelo: "GTX 1650", precio: 60000},
+    {id: 2, componente: "Tarjeta Grafica", modelo: "GTX 1660", precio: 110000},
     {id : 3, componente: "Tarjeta Grafica", modelo: "RTX 2060", precio: 120000},
     {id : 4, componente: "Tarjeta Grafica", modelo: "RTX 3060", precio: 160000},
 ];
@@ -15,11 +13,15 @@ const memoriasRam = [
 ];
 
 const procesadores = [
-    {id : 1, componente: "Procesador", modelo: 3, precio: 17000, imagen: "./images/i3.jpg"},
-    {id : 2, componente: "Procesador", modelo: 5, precio: 26000, imagen: "./images/i5.jpg"},
-    {id : 3, componente: "Procesador", modelo: 7, precio: 47000, imagen: "./images/i7.jpg"},
-    {id : 4, componente: "Procesador", modelo: 9, precio: 85000, imagen: "./images/i9.jpg"},
+    {id : 1, componente: "Procesador", modelo: 'I3', precio: 17000, imagen: "./images/i3.jpg"},
+    {id : 2, componente: "Procesador", modelo: 'I5', precio: 26000, imagen: "./images/i5.jpg"},
+    {id : 3, componente: "Procesador", modelo: 'I7', precio: 47000, imagen: "./images/i7.jpg"},
+    {id : 4, componente: "Procesador", modelo: 'I9', precio: 85000, imagen: "./images/i9.jpg"},
 ];
+
+const carritoDeCompras = []
+
+repetidos = false;
 
 procesadores.forEach(procesador =>  {
     
@@ -28,35 +30,47 @@ procesadores.forEach(procesador =>  {
     let seccionProcesadores = document.querySelector(".seccion__procesadores");
 
     contenedor.innerHTML = `<article class="articulo__procesadores" id="articulo__i3">
-    <h3>Intel Core I${procesador.modelo}</h3>
-    <img src="${procesador.imagen}" alt="Procesador Intel Core I${procesador.modelo}" class="articulo__imagen">
-    <button class="articulo__boton procesador__compra__1" onclick="clickBoton(${procesador.precio}, ${procesador.modelo})">+ AGREGAR AL CARRITO</button>
+    <h3>Intel Core ${procesador.modelo}</h3>
+    <img src="${procesador.imagen}" alt="Procesador Intel Core ${procesador.modelo}" class="articulo__imagen">
+    <button class="articulo__boton procesador__compra__1">+ AGREGAR AL CARRITO</button>
     </article>`
     
     contenedor.addEventListener('click', function (){
+        
+        
         const procesadorJSON = JSON.stringify(procesador);
         localStorage.setItem('procesador', procesadorJSON);
-        
-    });
-    
-    seccionProcesadores.appendChild(contenedor)
 
+        agregarAlcarrito(procesador);
+
+        let sectionCarrito = document.getElementById("seccion__carrito")
+        let carrito = document.createElement("div");
+        carrito.classList.add("carrito");
+
+
+        carrito.innerHTML = `<h3>Compraste un Procesador ${procesador.modelo}</h3>
+                            <p class = "procesador__precio id = "procesador__precio__${procesador.id}">Con un precio de $${procesador.precio}</p>`
+                           
+        
+        sectionCarrito.appendChild(carrito)
+
+
+        Swal.fire({
+            title: 'Felicidades',
+            text: `Has comprado ${procesador.componente} ${procesador.modelo}`,
+            icon: 'success',
+            confirmButtonText: 'ok'
+        })
+
+
+    });
+    seccionProcesadores.appendChild(contenedor);
 });
 
-
-function clickBoton(precio, modelo){
+function agregarAlcarrito(modelo){
     
-    
-    let sectionCarrito = document.getElementById("seccion__carrito")
-    let carrito = document.createElement("div");
-    carrito.classList.add("carrito");
-
-    carrito.innerHTML = `<h3>Compraste un Procesador I${modelo}</h3>
-                        <p class = "procesador__precio">Con un precio de $${precio}</p>`
-
-    
-    sectionCarrito.appendChild(carrito)
-    
+    carritoDeCompras.push(modelo);
+    console.log(carritoDeCompras);
 }
 
-localStorage.clear();
+
