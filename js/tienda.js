@@ -32,12 +32,20 @@ procesadores.forEach(procesador =>  {
     contenedor.innerHTML = `<article class="articulo__procesadores" id="articulo__i3">
     <h3>Intel Core ${procesador.modelo}</h3>
     <img src="${procesador.imagen}" alt="Procesador Intel Core ${procesador.modelo}" class="articulo__imagen">
-    <button class="articulo__boton procesador__compra__1">+ AGREGAR AL CARRITO</button>
+    <button class="articulo__boton">+ AGREGAR AL CARRITO</button>
     </article>`
     
-    contenedor.addEventListener('click', function (){
+    // let botonProcesador = document.getElementsByClassName("articulo__boton");
+
+    // for (const e of botonProcesador) {
+    //     e.addEventListener('click', apretarBotonProcesador)
+    // }
+    
+
+
+    contenedor.addEventListener('click', apretarBotonProcesador)
         
-        
+        function apretarBotonProcesador(){
         const procesadorJSON = JSON.stringify(procesador);
         localStorage.setItem('procesador', procesadorJSON);
 
@@ -59,13 +67,15 @@ procesadores.forEach(procesador =>  {
             title: 'Felicidades',
             text: `Has comprado ${procesador.componente} ${procesador.modelo}`,
             icon: 'success',
-            confirmButtonText: 'ok'
+            confirmButtonText: 'ok',
+            timer: 4000
         })
 
 
-    });
+    };
     seccionProcesadores.appendChild(contenedor);
-});
+}); 
+ 
 
 function agregarAlcarrito(modelo){
     
