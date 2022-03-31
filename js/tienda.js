@@ -35,15 +35,15 @@ procesadores.forEach(procesador =>  {
     <button class="articulo__boton">+ AGREGAR AL CARRITO</button>
     </article>`
     
-    // let botonProcesador = document.getElementsByClassName("articulo__boton");
-
-    // for (const e of botonProcesador) {
-    //     e.addEventListener('click', apretarBotonProcesador)
+    let botonProcesador = document.getElementsByClassName("articulo__boton");
+    
+    // for(let boton of botonProcesador){
+    //     boton.addEventListener('click', apretarBotonProcesador)
     // }
+
     
 
-
-    contenedor.addEventListener('click', apretarBotonProcesador)
+    // contenedor.addEventListener('click', apretarBotonProcesador)
         
         function apretarBotonProcesador(){
         const procesadorJSON = JSON.stringify(procesador);
@@ -58,7 +58,6 @@ procesadores.forEach(procesador =>  {
 
         carrito.innerHTML = `<h3>Compraste un Procesador ${procesador.modelo}</h3>
                             <p class = "procesador__precio id = "procesador__precio__${procesador.id}">Con un precio de $${procesador.precio}</p>`
-                           
         
         sectionCarrito.appendChild(carrito)
 
@@ -68,8 +67,8 @@ procesadores.forEach(procesador =>  {
             text: `Has comprado ${procesador.componente} ${procesador.modelo}`,
             icon: 'success',
             confirmButtonText: 'ok',
-            timer: 4000
-        })
+            timer: 3500,
+        });
 
 
     };
