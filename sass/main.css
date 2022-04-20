@@ -168,10 +168,12 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: .5rem;
-  font-size: 2rem;
 }
 
 .footer .footer__icons .footer__icon {
-  padding: .4rem;
+  padding: .3rem;
+  font-size: 2.2rem;
+  color: #90E0EF;
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
