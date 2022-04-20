@@ -3,7 +3,11 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
   font-family: 'Bebas Neue', cursive;
+  background-color: #90E0EF;
 }
 
 .header {
@@ -13,82 +17,133 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #EE9B00;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  background-color: #03045E;
+  color: #90E0EF;
 }
 
 .header .header__titulo {
-  padding: 3rem;
-  font-weight: bold;
+  font-size: 2.4rem;
 }
 
-.seccion__procesadores .articulo__titulo {
+.seccion__procesadores .seccion__procesadores--titulo {
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 2rem;
-  padding-top: 1.5rem;
   font-size: 2rem;
 }
 
-.seccion__procesadores .articulos__procesadores {
+.seccion__procesadores .contenedor__procesadores {
+  padding: 2rem;
   display: -ms-grid;
   display: grid;
-  margin: 0 5rem;
+      grid-template-areas: "i3 i5" "i7 i9";
   row-gap: 3rem;
-      grid-template-areas: " i3 . i5 " " i7 . i9 ";
+  margin: 2rem;
 }
 
-.seccion__procesadores .articulos__procesadores #articulo__i3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: i3;
-}
-
-.seccion__procesadores .articulos__procesadores #articulo__i5 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: i5;
-}
-
-.seccion__procesadores .articulos__procesadores #articulo__i7 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: i7;
-}
-
-.seccion__procesadores .articulos__procesadores #articulo__i9 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: i9;
-}
-
-.seccion__procesadores .articulos__procesadores .articulo__procesadores {
+.seccion__procesadores .contenedor__procesadores .articulo__procesadores {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.seccion__procesadores .articulos__procesadores .articulo__procesadores .articulo__imagen {
-  height: 15rem;
-  width: 15rem;
+.seccion__procesadores .contenedor__procesadores .articulo__procesadores .articulo__titulo {
+  font-size: 1.4rem;
 }
 
-.seccion__procesadores .articulos__procesadores .articulo__procesadores .articulo__boton {
-  padding: 1.6rem 1.4rem;
-  border-radius: .8rem;
-  background-color: #CA6702;
+.seccion__procesadores .contenedor__procesadores .articulo__procesadores .articulo__imagen {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 1rem;
+  border: #03045E 3px solid;
+}
+
+.seccion__procesadores .contenedor__procesadores .articulo__procesadores .articulo__boton {
+  padding: 1.4rem 1rem;
+  border-radius: 1rem;
+  border: #4CC9F0 3px solid;
+  color: #4CC9F0;
+  background-color: #03045E;
   font-size: 1.3rem;
+  font-family: 'Bebas Neue', cursive;
 }
 
-.carrito {
+.seccion__procesadores .contenedor__procesadores .articulo__procesadores .articulo__boton:hover {
+  cursor: pointer;
+}
+
+.seccion__procesadores #articulo__i3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: i3;
+}
+
+.seccion__procesadores #articulo__i5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: i5;
+}
+
+.seccion__procesadores #articulo__i7 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: i7;
+}
+
+.seccion__procesadores #articulo__i9 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: i9;
+}
+
+.carritoDeCompras {
+  margin: 1rem 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.carritoDeCompras #seccion__carrito .carrito {
+  margin: 1rem;
+}
+
+.carritoDeCompras #seccion__carrito .carrito .procesador__precio {
+  font-weight: 600;
+}
+
+.carritoDeCompras #seccion__carrito .carrito .procesador__precio--titulo {
+  font-weight: bolder;
+  color: #03045E;
+}
+
+.carritoDeCompras .carrito__boton {
+  padding: 1rem 1.6rem;
+  border-radius: 1rem;
+  border: #4CC9F0 3px solid;
+  color: #4CC9F0;
+  background-color: #03045E;
+  font-size: 1.1rem;
+  font-family: 'Bebas Neue', cursive;
+  margin: 1rem 2rem;
+}
+
+.carritoDeCompras .carrito__boton:hover {
+  cursor: pointer;
+}
+
+.footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -102,11 +157,21 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #03045E;
+  padding: 1rem;
+  color: #90E0EF;
+  letter-spacing: 1.5px;
 }
 
-.footer {
+.footer .footer__icons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: .5rem;
+  font-size: 2rem;
+}
+
+.footer .footer__icons .footer__icon {
+  padding: .4rem;
 }
 /*# sourceMappingURL=main.css.map */

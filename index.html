@@ -4,32 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tienda De Componentes</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/3d8528f68f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./sass/main.css">
 </head>
 <body>
     <header class="header">
         <h1 class="header__titulo">Tienda de Componentes</h1>
     </header>
-
-    <nav>
-        <ul>
-            <a href="./pages/reigstro.html"><li>registrarse</li></a>
-        </ul>
-    </nav>
     
     <section class="seccion__procesadores">
+        <h2 class="seccion__procesadores--titulo">Procesadores Intel</h2>
+        
+        <div class="contenedor__procesadores">
 
+        </div>
     </section>
 
 
-    <section id="seccion__carrito"></section>
+    <section class="carritoDeCompras">
+        
+    <h2>Carrito De Compras:</h2>
 
-    <footer>
-        <h3>Redes</h3>
+        <div id="seccion__carrito">
+
+        </div>
+
+        <button id="carrito__botonComprar" class="carrito__boton">Precio Final: 0$</button>
+        <button id="carrito__botonBorrar" class="carrito__boton">Borrar Carrito</button>
+    </section>
+
+    <footer class="footer">
+        <h3 class="footer__titulo">Redes</h3>
+
+        <div class="footer__icons">
+            <i class="fa-brands fa-instagram footer__icon"></i>
+            <i class="fa-brands fa-facebook footer__icon"></i>
+            <i class="fa-brands fa-twitter footer__icon"></i>        
+        </div>
     </footer>
 
     <script src="./js/tienda.js"></script>
